@@ -1,0 +1,14 @@
+<%- include('header.ejs') %>
+<form action="/superhero" method="post" id="container">
+<% if (content) { %>
+ 
+    <% for( let i = 0; i < content.length; i++ ) { %>
+       <button class="card" type="submit" name="button" value="<%= content[i].id %>" > <img src="<%= content[i].image.url %>" alt="">
+        <h2><%= content[i].name %></h2></button>
+    <% } %></form>
+<%}  else{ %>
+    
+<div class="heading"><h2>No super hero available</h2></div>
+        <% } %>
+
+<%- include('footer.ejs') %>

@@ -1,0 +1,90 @@
+<%- include('header.ejs') %>
+<div id="herocontainer">
+<div id="Herocard">
+    <div class="namesec">
+      <div id="names">
+        <h1><%= content.name %></h1>
+        <h3>Appearance</h3>
+        <div class="bio">  
+          
+          
+          <div class="score">
+            <p class="label">Gender </p>
+            <p>:  <%= content.appearance.gender %></p>
+          </div>
+          
+          <div class="score">
+            <p class="label">Race </p>
+            <p>:  <%= content.appearance.race %></p>
+          </div>
+
+          <div class="score">
+            <p class="label">Height </p>
+            <p>:  <%= content.appearance.height[0] %> ft.</p>
+          </div>
+
+          <div class="score">
+            <p class="label">Weight </p>
+            <p>:  <%= content.appearance.weight[1] %></p>
+          </div>
+
+          <div class="score">
+            <p class="label">Eye Color </p>
+            <p>:  <%= content.appearance['eye-color'] %></p>
+          </div>
+
+          <div class="score">
+            <p class="label">Hair Color </p>
+            <p>:  <%= content.appearance['hair-color'] %></p>
+          </div>
+        </div>
+     </div>
+     <div class="profile"><img src="<%= content.image.url %>" alt=""></div>
+
+     
+    </div>
+    <div class="photosec">
+        
+
+        
+        <div class="powersec">  
+          <h3>Powerstats</h3>
+          
+          <div class="bar">
+            <p class="label">Intelligence </p>
+            <p><%= content.powerstats.intelligence %>%</p>
+            <progress id="bar" max="100" value="<%= content.powerstats.intelligence %>"></progress>
+          </div>
+          
+          <div class="bar">
+            <p class="label">Strength </p>
+            <p><%= content.powerstats.strength %>%</p>
+            <progress id="bar" max="100" value="<%= content.powerstats.strength %>"></progress>
+          </div>
+
+          <div class="bar">
+            <p class="label">Speed </p>
+            <p><%= content.powerstats.speed %>%</p>
+            <progress id="bar" max="100" value="<%= content.powerstats.speed %>"></progress>
+          </div>
+
+          <div class="bar">
+            <p class="label">Durability </p>
+            <p><%= content.powerstats.durability %>%</p>
+            <progress id="bar" max="100" value="<%= content.powerstats.durability %>"></progress>
+          </div>
+
+          <div class="bar">
+            <p class="label">Power </p>
+            <p><%= content.powerstats.power %>%</p>
+            <progress id="bar" max="100" value="<%= content.powerstats.power %>"></progress>
+          </div>
+        
+     </div>
+       
+    </div>
+</div>
+</div>
+
+
+<%- include('footer.ejs') %>
