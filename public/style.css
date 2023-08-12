@@ -118,6 +118,7 @@ input[type="search"]::placeholder {
     padding: 5px 5px;
     text-align: center;
     outline: none;
+     color: #000000;
     background-color: white;
 }
 
